@@ -10,35 +10,33 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            //int x1 = 33;
-            //int y1 = 3;
-            //char sym1 = '*';
+            Point p1 = new Point(4, 3, '#');
+            Point p2 = new Point(3, 3, '#');
+            p1.Draw();
 
-            Point p1= new Point();
-            Point p2 = new Point();
-            Point p3 = new Point(4,3,'#');
-            //p1.sym = '*';
-            //p1.x = 3;
-            //p1.y = 5;
-            p3.Draw();
+            List<int> numList = new List<int>();
+            numList.Add(0);
+            numList.Add(1);
+            numList.Add(2);
 
-            //p1.Draw(2, 3, '%');
+            int x = numList[0];
+            int y = numList[1];
+            int z = numList[2];
 
+            foreach (int i in numList)
+            {
+                Console.WriteLine(i);
+            }
 
-            //p2.Draw(5, 5, '&');
-            
-            //Draw(x1, y1, sym1);
-            //Draw(5, 5, '&');
+            numList.RemoveAt(0);
+
+            List<Point> pList = new List<Point>();
+            pList.Add(p1);
+            pList.Add(p2);
 
             Console.ReadKey();
         }
 
-        //static void Draw(int x1, int y1, char sym1)
-        //{
-        //    Console.BackgroundColor = ConsoleColor.White;
-        //    Console.ForegroundColor = ConsoleColor.DarkBlue;
-        //    Console.SetCursorPosition(x1, y1);
-        //    Console.Write(sym1);
-        //}
+
     }
 }
