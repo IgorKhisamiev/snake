@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Snake
@@ -19,10 +20,10 @@ namespace Snake
             verticalLine leftLine = new verticalLine(0, 0, 24, '+');
             verticalLine rightLine = new verticalLine(78, 0, 24, '+');
 
-            upLine.Drow();
-            downLine.Drow();
-            leftLine.Drow();
-            rightLine.Drow();
+            upLine.Draw();
+            downLine.Draw();
+            leftLine.Draw();
+            rightLine.Draw();
 
             // draw point
 
@@ -32,10 +33,19 @@ namespace Snake
             //создаем класс snake
 
             Snake snake = new Snake(p,4,Direction.RIGHT);
-            snake.Drow();
+            snake.Draw();
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
+            snake.Move();
+            Thread.Sleep(300);
 
 
-            
+
+
             Console.ReadKey();
         }
 
