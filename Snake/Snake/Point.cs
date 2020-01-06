@@ -53,8 +53,8 @@ namespace Snake
 
         public void Draw(/*int x, int y, char sym*/)
         {
-            Console.BackgroundColor = ConsoleColor.White;
-            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            /*Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.DarkBlue;*/
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
         }
@@ -70,5 +70,9 @@ namespace Snake
             return x + ", " + y + ", " + sym;
         }
 
+        public bool IsHit(Point p)
+        {
+            return p.x==this.x && p.y==this.y;
+        }
     }
 }
